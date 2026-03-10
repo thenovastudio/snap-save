@@ -1,17 +1,17 @@
 ```
-  ____                    ____                  
- / ___|  _ __    __ _   _ __  / ___|   __ _ __   __ ___ 
- \___ \ | '_ \  / _` | | '_ \\___ \ / _` |\ \ / // _ \
-  ___) || | | || (_| | | |_) |___) || (_| | \ V /|  __/
- |____/ |_| |_| \__,_| | .__/|____/  \__,_|  \_/  \___|
-                        |_|                              
+ _____                      _   _     _             ____                  
+| ____|_   _____ _ __ _   _| |_| |__ (_)_ __   __ _/ ___|  __ ___   _____ 
+|  _| \ \ / / _ \ '__| | | | __| '_ \| | '_ \ / _` \___ \ / _` \ \ / / _ \
+| |___ \ V /  __/ |  | |_| | |_| | | | | | | | (_| |___) | (_| |\ V /  __/
+|_____| \_/ \___|_|   \__, |\__|_| |_|_|_| |_|\__, |____/ \__,_| \_/ \___|
+                      |___/                   |___/
 ```
 
-# SnapSave
+# EverythingSave
 
 **A sleek, modern social media video downloader.** Paste any share link and download videos instantly.
 
-Built with a premium dark glassmorphism UI, SnapSave supports all major social media platforms with a single, beautiful interface.
+Built with a premium dark glassmorphism UI, EverythingSave supports all major social media platforms with a single, beautiful interface.
 
 ---
 
@@ -67,7 +67,7 @@ Built with a premium dark glassmorphism UI, SnapSave supports all major social m
 
 ```bash
 # Clone the repository
-git clone https://github.com/thenovastudio/snap-save.git
+git clone https://github.com/yourusername/snap-save.git
 cd snap-save
 
 # Create a virtual environment (recommended)
@@ -250,7 +250,7 @@ This project is licensed under the **MIT License** -- see the [LICENSE](LICENSE)
 
 ## Disclaimer
 
-SnapSave is intended for **personal use only**. Please respect the terms of service of each platform and the copyright of content creators.
+EverythingSave is intended for **personal use only**. Please respect the terms of service of each platform and the copyright of content creators.
 
 - Do not use this tool to download copyrighted content without permission.
 - Do not redistribute downloaded content without the creator's consent.
