@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""SnapSave - Social Media Video Downloader Backend"""
+"""EverythingSave - Social Media Video Downloader Backend"""
 
 import os
 import re
@@ -29,7 +29,7 @@ app = Flask(__name__)
 CORS(app)
 
 app.config["MAX_CONTENT_LENGTH"] = 16 * 1024 * 1024  # 16 MB request limit
-app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "snapsave-dev-key")
+app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY", "everythingsave-dev-key")
 
 # Logging
 logging.basicConfig(
@@ -322,5 +322,5 @@ def server_error(e):
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     debug = os.environ.get("FLASK_DEBUG", "0") == "1"
-    logger.info("Starting SnapSave on port %d (debug=%s)", port, debug)
+    logger.info("Starting EverythingSave on port %d (debug=%s)", port, debug)
     app.run(host="0.0.0.0", port=port, debug=debug)
