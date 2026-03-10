@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual environment
+venv/
+env/
+.venv/
+
+# Environment variables
+.env
+.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Downloads
+downloads/
+*.mp4
+*.webm
+*.mkv
+*.avi
+*.mp3
+*.m4a
+*.wav
+
+# Misc
+*.log
