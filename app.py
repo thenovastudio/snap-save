@@ -216,6 +216,11 @@ def index():
     return render_template("index.html")
 
 
+@app.route("/info")
+def info():
+    return render_template("info.html")
+
+
 @app.route("/api/info", methods=["POST"])
 def api_info():
     """Return video metadata for a given URL."""
