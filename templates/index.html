@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SnapSave - Download Videos from Any Platform</title>
+    <meta name="description" content="Download videos from YouTube, TikTok, Instagram, Twitter/X, Facebook, Reddit, Snapchat and more. Free, fast, and no registration required.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <!-- Dot grid background -->
+    <div class="dot-grid"></div>
+
+    <!-- Ambient glow blobs -->
+    <div class="ambient-glow ambient-glow--1"></div>
+    <div class="ambient-glow ambient-glow--2"></div>
+    <div class="ambient-glow ambient-glow--3"></div>
+
+    <!-- Main Container -->
+    <div class="container">
+
+        <!-- Navigation -->
+        <nav class="nav">
+            <a href="/" class="nav__logo">
+                <i class="fas fa-bolt"></i>
+                <span>SnapSave</span>
+            </a>
+            <div class="nav__links">
+                <a href="#platforms" class="nav__link">Platforms</a>
+                <a href="#how-it-works" class="nav__link">How It Works</a>
+                <a href="https://github.com" target="_blank" class="nav__link nav__link--icon" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero">
+            <div class="hero__badge">Free &bull; Fast &bull; No Registration</div>
+            <h1 class="hero__title">
+                <span class="gradient-text">SnapSave</span>
+            </h1>
+            <p class="hero__subtitle">Download videos from any platform instantly</p>
+
+            <!-- URL Input -->
+            <div class="input-group glass-card">
+                <div class="input-group__icon">
+                    <i class="fas fa-link"></i>
+                </div>
+                <input
+                    type="url"
+                    id="urlInput"
+                    class="input-group__field"
+                    placeholder="Paste your video link here..."
+                    autocomplete="off"
+                    spellcheck="false"
+                >
+                <button id="pasteBtn" class="input-group__paste" title="Paste from clipboard">
+                    <i class="fas fa-clipboard"></i>
+                </button>
+                <button id="fetchBtn" class="btn btn--primary">
+                    <span class="btn__text">Download</span>
+                    <span class="btn__loader" hidden>
+                        <i class="fas fa-circle-notch fa-spin"></i>
+                    </span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Results Section -->
+        <section id="results" class="results" hidden>
+            <div class="results__card glass-card">
+                <!-- Thumbnail -->
+                <div class="results__media">
+                    <img id="resultThumb" class="results__thumb" src="" alt="Video thumbnail">
+                    <span id="resultDuration" class="results__duration"></span>
+                </div>
+                <!-- Info -->
+                <div class="results__info">
+                    <div id="resultPlatform" class="results__platform-badge"></div>
+                    <h2 id="resultTitle" class="results__title"></h2>
+                    <p id="resultUploader" class="results__uploader"></p>
+
+                    <!-- Quality Selector -->
+                    <div class="results__controls">
+                        <div class="select-wrap">
+                            <select id="qualitySelect" class="select-wrap__select">
+                                <option value="best">Best Quality</option>
+                            </select>
+                            <i class="fas fa-chevron-down select-wrap__icon"></i>
+                        </div>
+                        <button id="downloadBtn" class="btn btn--download">
+                            <i class="fas fa-download"></i>
+                            <span class="btn__text">Download Video</span>
+                            <span class="btn__loader" hidden>
+                                <i class="fas fa-circle-notch fa-spin"></i>
+                            </span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Loading Skeleton -->
+        <section id="skeleton" class="results" hidden>
+            <div class="skeleton-card glass-card">
+                <div class="skeleton skeleton--thumb"></div>
+                <div class="skeleton-info">
+                    <div class="skeleton skeleton--badge"></div>
+                    <div class="skeleton skeleton--title"></div>
+                    <div class="skeleton skeleton--subtitle"></div>
+                    <div class="skeleton skeleton--controls"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Supported Platforms -->
+        <section id="platforms" class="platforms">
+            <h2 class="section-title">Supported Platforms</h2>
+            <p class="section-subtitle">Download from all your favorite social media platforms</p>
+            <div class="platforms__grid">
+                <div class="platform-card glass-card" style="--accent:#FF0000">
+                    <i class="fab fa-youtube"></i><span>YouTube</span>
+                </div>
+                <div class="platform-card glass-card" style="--accent:#00F2EA">
+                    <i class="fab fa-tiktok"></i><span>TikTok</span>
+                </div>
+                <div class="platform-card glass-card" style="--accent:#E1306C">
+                    <i class="fab fa-instagram"></i><span>Instagram</span>
+                </div>
+                <div class="platform-card glass-card" style="--accent:#FFFFFF">
+                    <i class="fab fa-x-twitter"></i><span>Twitter / X</span>
+                </div>
+                <div class="platform-card glass-card" style="--accent:#1877F2">
+                    <i class="fab fa-facebook"></i><span>Facebook</span>
+                </div>
+                <div class="platform-card glass-card" style="--accent:#FF4500">
+                    <i class="fab fa-reddit-alien"></i><span>Reddit</span>
+                </div>
+                <div class="platform-card glass-card" style="--accent:#FFFC00">
+                    <i class="fab fa-snapchat"></i><span>Snapchat</span>
+                </div>
+                <div class="platform-card glass-card" style="--accent:#E60023">
+                    <i class="fab fa-pinterest"></i><span>Pinterest</span>
+                </div>
+                <div class="platform-card glass-card" style="--accent:#1AB7EA">
+                    <i class="fab fa-vimeo-v"></i><span>Vimeo</span>
+                </div>
+                <div class="platform-card glass-card" style="--accent:#9146FF">
+                    <i class="fab fa-twitch"></i><span>Twitch</span>
+                </div>
+                <div class="platform-card glass-card" style="--accent:#FF5500">
+                    <i class="fab fa-soundcloud"></i><span>SoundCloud</span>
+                </div>
+                <div class="platform-card glass-card" style="--accent:#00AAFF">
+                    <i class="fas fa-play-circle"></i><span>Dailymotion</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works -->
+        <section id="how-it-works" class="how-it-works">
+            <h2 class="section-title">How It Works</h2>
+            <p class="section-subtitle">Three simple steps to download any video</p>
+            <div class="steps">
+                <div class="step glass-card">
+                    <div class="step__number">1</div>
+                    <div class="step__icon"><i class="fas fa-paste"></i></div>
+                    <h3>Paste Link</h3>
+                    <p>Copy the video URL from any supported platform and paste it above</p>
+                </div>
+                <div class="step glass-card">
+                    <div class="step__number">2</div>
+                    <div class="step__icon"><i class="fas fa-sliders-h"></i></div>
+                    <h3>Choose Quality</h3>
+                    <p>Select your preferred resolution and format from the options</p>
+                </div>
+                <div class="step glass-card">
+                    <div class="step__number">3</div>
+                    <div class="step__icon"><i class="fas fa-download"></i></div>
+                    <h3>Download</h3>
+                    <p>Click download and save the video directly to your device</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer__inner">
+                <p class="footer__brand">
+                    <i class="fas fa-bolt"></i> Powered by <strong>SnapSave</strong>
+                </p>
+                <p class="footer__disclaimer">
+                    For personal use only. Respect copyright and platform terms of service.
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Toast container -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
